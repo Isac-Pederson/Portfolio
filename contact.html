@@ -3,11 +3,15 @@
 <html lang="en-us">
     <head>
         <!-- Links -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="contact form example">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="https://i.imgur.com/mlEvDZO.png" />
 
         <!-- NavBar -->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
@@ -39,7 +43,7 @@
                 </div>
             </div>
 <!--Section: Contact v.2-->
-<section class="mb-4">
+
 
 
  
@@ -50,7 +54,8 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form class="gform pure-form pure-form-stacked" method="POST" data-email="isacjped@gmail.com."
+                action="https://script.google.com/macros/s/AKfycbyR9fX3nbppXA0nxP1TK782wGi2kUTCbRzxf1qcqRjHLr83Xc4/exec">
 
                 <!--Grid row-->
                 <div class="row">
@@ -67,8 +72,9 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Your email</label>
+                            <input type="email" id="email" name="email" class="form-control" value="" required placeholder="your.name@email.com">
+                            <label for="email" >Your email</label>
+                            <span class="email-invalid" style="display:none"></span>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -80,7 +86,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
+                            <input type="text" id="message" name="message" class="form-control">
                             <label for="subject" class="">Subject</label>
                         </div>
                     </div>
@@ -102,10 +108,19 @@
                 </div>
                 <!--Grid row-->
 
-            </form>
+                 <div class="text-center text-md-left">
+                    <button class="btn btn-primary">
+                        Send
+                    </button>
 
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                    <div class="thankyou_message" style="display:none;">
+                        <h5>Message sent!</h5>
+                    </div>
+
+            </form>
+             <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+            
+
             </div>
             <div class="status"></div>
         </div>
@@ -115,35 +130,34 @@
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Bikini Bottom, Somewhere in the Pacific Ocean</p>
+                    <p>Location: Eugene, Oregon</p>
                 </li>
 
                 <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>541-456-8920(fake number)</p>
+                    <p>Phone Number: 541-844-9475</p>
                 </li>
 
                 <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>isacjped@gmail.com</p>
+                    <p>Email: isacjped@gmail.com</p>
                 </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <a href="https://www.linkedin.com/in/isac-pederson-7070491b2/" target="_blank">Linkedin</a>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <a href="https://github.com/Isac-Pederson" target="_blank">Github</a>
+                </li>
+
             </ul>
         </div>
         <!--Grid column-->
 
     </div>
 
-</section>
-<!--Section: Contact v.2-->
-
-
-
-
-
 
 
         </div>
-  
-    </body>
-
-
-
+    
+</body>
 </html>
